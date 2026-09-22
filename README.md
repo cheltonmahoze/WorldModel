@@ -117,7 +117,7 @@ tickets, automations, reports, notifications and a year of metrics.
 
 ```bash
 npm run verify         # tsc --noEmit + vitest (24 unit tests)
-npm run test:e2e       # 138 HTTP checks against a running server
+npm run test:e2e       # 141 HTTP checks against a running server
 npm run build          # production build (93 routes, 102 kB shared JS)
 ```
 
@@ -128,8 +128,8 @@ customers/contacts/opportunities/activities/automations/reports/teams/webhooks/A
 notification centre, audit trail, exports, background jobs, RBAC refusals, tenant isolation, error
 hygiene, plan guardrails and rate limiting. It is environment-aware: against a production build it
 verifies that one-time tokens are never returned instead of consuming them rather than trying to
-spend them. Verified green in both modes — `138/138` in development and `134/134 + 2 skipped`
-against the production build.
+spend them. Verified green in both modes — `141/141` in development and `137/137 + 2 skipped`
+against the production build (the two skipped flows need a token that production only emails).
 
 ## Environment
 
